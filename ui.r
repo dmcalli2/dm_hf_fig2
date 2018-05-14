@@ -34,7 +34,7 @@ ui <- fluidPage(
            We will add an informative heading as well as text explaining figure when the findings have been published.
            At present this information has been withheld to preserve the novelty of the publication.
            Choose whether to plot the rate for different age and deprivation levels, and whether to view the rates
-           on the relative or log-scale.")
+           on the absolute or relative (ie log) scale.")
       )
    )
 )
