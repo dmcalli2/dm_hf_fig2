@@ -4,11 +4,13 @@
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Figure 2"),
+   titlePanel("Trends in heart failure hospitalisation"),
    
    # Sidebar with a slider input for number of bins 
    sidebarLayout(
       sidebarPanel(
+         h4("Choose whether to plot the rate for different age and deprivation levels, and whether to view the rates
+           on the absolute or relative (ie log) scale."),
          sliderInput("age",
                      "Age (years):",
                      min = 20,
@@ -28,13 +30,18 @@ ui <- fluidPage(
       
       # Show a plot of the generated distribution
       mainPanel(
-         plotOutput("TimePlot"),
-         h1("Instructions"),
-         p("This interactive plot corresponds to Figure 2 in the manuscript.
-           We will add an informative heading as well as text explaining the figure when the findings have been published.
-           At present this information has been withheld to preserve the novelty of the publication.
-           Choose whether to plot the rate for different age and deprivation levels, and whether to view the rates
-           on the absolute or relative (ie log) scale.")
+        plotOutput("TimePlot"),
+         h4("Description of figure"),
+                  p(
+"This plot is an interactive version of Figure 2 in the manuscript XXX. 
+Please see the original manuscript for details of the data and additional details of the analyses."),
+p("
+The lines represent the predicted rates obtained from generalized additive models of incident heart failure events.
+The ribbons are 95% confidence intervals. Covariates included in the model were age, sex, deprivation, diabetes type 
+and calendar-year, with interaction terms included where these improved model fit. The model was fit with a log-link and 
+Poisson likelihood, with correction of the standard errors for overdispersion. Penalized thin plate regression splines were used 
+to model non-linear associations for calendar-year by diagnosis type. Predictions were made for men and women aged 50 (as this 
+was the closest decade to the mean age in the general population).")
       )
    )
 )
