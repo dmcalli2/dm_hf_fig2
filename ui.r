@@ -40,8 +40,7 @@ The lines represent the predicted rates obtained from generalized additive model
 The ribbons are 95% confidence intervals. Covariates included in the model were age, sex, deprivation, diabetes type 
 and calendar-year, with interaction terms included where these improved model fit. The model was fit with a log-link and 
 Poisson likelihood, with correction of the standard errors for overdispersion. Penalized thin plate regression splines were used 
-to model non-linear associations for calendar-year by diagnosis type. Predictions were made for men and women aged 50 (as this 
-was the closest decade to the mean age in the general population).")
+to model non-linear associations for calendar-year by diagnosis type.")
       )
    )
 )
