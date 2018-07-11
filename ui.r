@@ -32,15 +32,14 @@ ui <- fluidPage(
       mainPanel(
         plotOutput("TimePlot"),
          h4("Description of figure"),
-                  p(
-"This plot is an interactive version of Figure 2 in the manuscript XXX. 
-Please see the original manuscript for details of the data and additional details of the analyses."),
-p("
-The lines represent the predicted rates obtained from generalized additive models of incident heart failure events.
-The ribbons are 95% confidence intervals. Covariates included in the model were age, sex, deprivation, diabetes type 
-and calendar-year, with interaction terms included where these improved model fit. The model was fit with a log-link and 
-Poisson likelihood, with correction of the standard errors for overdispersion. Penalized thin plate regression splines were used 
-to model non-linear associations for calendar-year by diagnosis type.")
+                  htmlOutput("html_link"),
+                  p("Please see the original manuscript for details of the data and additional details of the analyses."),
+                  p("
+                  The lines represent the predicted rates obtained from generalized additive models of incident heart failure events.
+                  The ribbons are 95% confidence intervals. Covariates included in the model were age, sex, deprivation, diabetes type 
+                  and calendar-year, with interaction terms included where these improved model fit. The model was fit with a log-link and 
+                  Poisson likelihood, with correction of the standard errors for overdispersion. Penalized thin plate regression splines were used 
+                  to model non-linear associations for calendar-year by diagnosis type.")
       )
    )
 )

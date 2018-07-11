@@ -41,4 +41,10 @@ server <- function(input, output) {
     
     plot_time
    })
+   
+   # Make link
+   output$html_link <- renderUI({
+                a("This plot is an interactive version of Figure 2 in a paper published in Circulation",
+                                href="https://doi.org/10.1161/CIRCULATIONAHA.118.034986", target="_blank")
+        })
 }
